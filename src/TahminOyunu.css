@@ -1,0 +1,86 @@
+
+
+body {
+  background: linear-gradient(to right, #a1c4fd, #fbc2eb);
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.oyun-input {
+  padding: 12px;
+  width: 220px;
+  border: 2px solid #8a8aff;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.oyun-input:focus {
+  border-color: #4b4bff;
+  box-shadow: 0 0 6px #4b4bff80;
+}
+
+
+.oyun-buton {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, background-color 0.3s ease;
+}
+
+.oyun-buton:hover {
+  transform: scale(1.05);
+}
+
+.tahmin-buton {
+  background-color: #4b4bff;
+  color: white;
+}
+
+.tahmin-buton:hover {
+  background-color: #3737d6;
+}
+
+.sifirla-buton {
+  background-color: #e6e6e6;
+  color: #333;
+}
+
+.sifirla-buton:hover {
+  background-color: #d4d4d4;
+}
+
+
+.oyun-mesaj {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+
+.kazandi {
+  color: #170a6c;
+  font-weight: bold;
+}
+
+
+.yeni-oyun-buton {
+  background-color: #64036b;
+  color: white;
+  margin-top: 15px;
+}
+
+.yeni-oyun-buton:hover {
+  background-color: #e85798;
+}
