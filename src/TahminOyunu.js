@@ -18,6 +18,10 @@ export function TahminOyunu() {
             setMesaj("Daha yüksek bir sayı deneyin.");
         } else if (sayi > rastgeleSayi){
             setMesaj("Daha düşük bir sayı deneyin.");
+            if (sayi< 1 || sayi > 100) {
+                setMesaj("Lütfen 1 ile 100 arasında bir sayı girin.");
+                return;
+            }
         }
     };
     const oyunuSifirla= () => {
@@ -34,6 +38,8 @@ export function TahminOyunu() {
 
         <input
         type="number"
+        min="1"
+        max="100"
         value={tahmin}
         onChange={(e) => setTahmin (e.target.value)}
         placeholder="tahmininizi girin"
