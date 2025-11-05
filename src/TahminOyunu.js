@@ -1,5 +1,7 @@
 import { useState } from "react";
 import './TahminOyunu.css';
+import background from "./assets/sayilar-bg.png";
+
 
 export function TahminOyunu() {
 
@@ -32,29 +34,46 @@ export function TahminOyunu() {
     };
 
     return(
-        <div className="oyun kapsayici">
-        
-        <h2> 1 ile 100 arasında bir sayı tahmin edin </h2>
+    
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        width: "100vw", 
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <h2>1 ile 100 arasında bir sayı tahmin edin</h2>
 
-        <input
+      <input
         type="number"
         min="1"
         max="100"
         value={tahmin}
-        onChange={(e) => setTahmin (e.target.value)}
-        placeholder="tahmininizi girin"
+        onChange={(e) => setTahmin(e.target.value)}
+        placeholder="Tahmininizi girin"
         className="oyun-input"
-       
-        />
-        <button onClick={tahminKontrolEt} className="oyun-buton tahmin-buton">
-            Tahmin Et
-            </button>
+      />
 
-        <button onClick={oyunuSifirla} className="oyun-buton sifirla-buton">
-            Oyunu Sıfırla
-            
-            </button>
-         <p className={`oyun-mesaj ${mesaj.includes("Tebrikler") ? "kazandi" : ""}`}>
+      <button onClick={tahminKontrolEt} className="oyun-buton tahmin-buton">
+        Tahmin Et
+      </button>
+
+      <button onClick={oyunuSifirla} className="oyun-buton sifirla-buton">
+        Oyunu Sıfırla
+      </button>
+
+      <p
+        className={`oyun-mesaj ${
+          mesaj.includes("Tebrikler") ? "kazandi" : ""
+        }`}
+      >
         {mesaj}
       </p>
 
@@ -63,7 +82,6 @@ export function TahminOyunu() {
           Yeni Oyun Başlat
         </button>
       )}
-        </div>
-
-       );
+    </div>
+  );
 }
